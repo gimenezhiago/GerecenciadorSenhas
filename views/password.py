@@ -50,7 +50,7 @@ class FernetHasher:
         return self.fernet.encrypt(value)
 
     def decrypt(self, value):
-         if not isinstance(value, bytes):
+        if not isinstance(value, bytes):
             value = value.encode()
         try:
             return self.fernet.decrypt(value).decode()
